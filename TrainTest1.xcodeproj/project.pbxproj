@@ -582,6 +582,10 @@
 				DEVELOPMENT_TEAM = T5T228SHK5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrainTest1/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScareMe;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Take photos";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Take photos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Take photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -610,6 +614,10 @@
 				DEVELOPMENT_TEAM = T5T228SHK5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrainTest1/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScareMe;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Take photos";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Take photos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Take photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
