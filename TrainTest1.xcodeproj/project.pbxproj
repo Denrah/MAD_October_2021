@@ -34,6 +34,14 @@
 		727EA01B272E9A2600E603D6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EA01A272E9A2600E603D6 /* MainViewController.swift */; };
 		727EA01E272EC5F300E603D6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EA01D272EC5F300E603D6 /* ProfileViewController.swift */; };
 		727EA021272ECD1800E603D6 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EA020272ECD1800E603D6 /* ChatsViewController.swift */; };
+		727EA02A272EE26200E603D6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727EA029272EE26200E603D6 /* WidgetKit.framework */; };
+		727EA02C272EE26200E603D6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727EA02B272EE26200E603D6 /* SwiftUI.framework */; };
+		727EA02F272EE26200E603D6 /* ScareMeParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EA02E272EE26200E603D6 /* ScareMeParty.swift */; };
+		727EA032272EE26300E603D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 727EA031272EE26300E603D6 /* Assets.xcassets */; };
+		727EA034272EE26300E603D6 /* ScareMeParty.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 727EA030272EE26200E603D6 /* ScareMeParty.intentdefinition */; };
+		727EA035272EE26300E603D6 /* ScareMeParty.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 727EA030272EE26200E603D6 /* ScareMeParty.intentdefinition */; };
+		727EA038272EE26300E603D6 /* ScareMePartyExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 727EA027272EE26200E603D6 /* ScareMePartyExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		727EA03F272EE5BC00E603D6 /* BalooPaaji2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 727EA03E272EE5BC00E603D6 /* BalooPaaji2-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +59,28 @@
 			remoteGlobalIDString = 72449BA4272E688400689527;
 			remoteInfo = TrainTest1;
 		};
+		727EA036272EE26300E603D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72449B9D272E688400689527 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 727EA026272EE26200E603D6;
+			remoteInfo = ScareMePartyExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		727EA03C272EE26300E603D6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				727EA038272EE26300E603D6 /* ScareMePartyExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		72449BA5272E688400689527 /* TrainTest1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainTest1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +108,15 @@
 		727EA01D272EC5F300E603D6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		727EA020272ECD1800E603D6 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		727EA022272EE1AD00E603D6 /* TrainTest1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrainTest1.entitlements; sourceTree = "<group>"; };
+		727EA027272EE26200E603D6 /* ScareMePartyExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScareMePartyExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		727EA029272EE26200E603D6 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		727EA02B272EE26200E603D6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		727EA02E272EE26200E603D6 /* ScareMeParty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScareMeParty.swift; sourceTree = "<group>"; };
+		727EA030272EE26200E603D6 /* ScareMeParty.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = ScareMeParty.intentdefinition; sourceTree = "<group>"; };
+		727EA031272EE26300E603D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		727EA033272EE26300E603D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		727EA03D272EE26A00E603D6 /* ScareMePartyExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScareMePartyExtension.entitlements; sourceTree = "<group>"; };
+		727EA03E272EE5BC00E603D6 /* BalooPaaji2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooPaaji2-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,15 +148,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		727EA024272EE26200E603D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				727EA02C272EE26200E603D6 /* SwiftUI.framework in Frameworks */,
+				727EA02A272EE26200E603D6 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		72449B9C272E688400689527 = {
 			isa = PBXGroup;
 			children = (
+				727EA03D272EE26A00E603D6 /* ScareMePartyExtension.entitlements */,
 				72449BA7272E688400689527 /* TrainTest1 */,
 				72449BBE272E688400689527 /* TrainTest1Tests */,
 				72449BC8272E688400689527 /* TrainTest1UITests */,
+				727EA02D272EE26200E603D6 /* ScareMeParty */,
+				727EA028272EE26200E603D6 /* Frameworks */,
 				72449BA6272E688400689527 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -129,6 +179,7 @@
 				72449BA5272E688400689527 /* TrainTest1.app */,
 				72449BBB272E688400689527 /* TrainTest1Tests.xctest */,
 				72449BC5272E688400689527 /* TrainTest1UITests.xctest */,
+				727EA027272EE26200E603D6 /* ScareMePartyExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,6 +315,27 @@
 			path = Chats;
 			sourceTree = "<group>";
 		};
+		727EA028272EE26200E603D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				727EA029272EE26200E603D6 /* WidgetKit.framework */,
+				727EA02B272EE26200E603D6 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		727EA02D272EE26200E603D6 /* ScareMeParty */ = {
+			isa = PBXGroup;
+			children = (
+				727EA03E272EE5BC00E603D6 /* BalooPaaji2-Bold.ttf */,
+				727EA02E272EE26200E603D6 /* ScareMeParty.swift */,
+				727EA030272EE26200E603D6 /* ScareMeParty.intentdefinition */,
+				727EA031272EE26300E603D6 /* Assets.xcassets */,
+				727EA033272EE26300E603D6 /* Info.plist */,
+			);
+			path = ScareMeParty;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -274,10 +346,12 @@
 				72449BA1272E688400689527 /* Sources */,
 				72449BA2272E688400689527 /* Frameworks */,
 				72449BA3272E688400689527 /* Resources */,
+				727EA03C272EE26300E603D6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				727EA037272EE26300E603D6 /* PBXTargetDependency */,
 			);
 			name = TrainTest1;
 			packageProductDependencies = (
@@ -329,6 +403,23 @@
 			productReference = 72449BC5272E688400689527 /* TrainTest1UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		727EA026272EE26200E603D6 /* ScareMePartyExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 727EA039272EE26300E603D6 /* Build configuration list for PBXNativeTarget "ScareMePartyExtension" */;
+			buildPhases = (
+				727EA023272EE26200E603D6 /* Sources */,
+				727EA024272EE26200E603D6 /* Frameworks */,
+				727EA025272EE26200E603D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScareMePartyExtension;
+			productName = ScareMePartyExtension;
+			productReference = 727EA027272EE26200E603D6 /* ScareMePartyExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -349,6 +440,9 @@
 					72449BC4272E688400689527 = {
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = 72449BA4272E688400689527;
+					};
+					727EA026272EE26200E603D6 = {
+						CreatedOnToolsVersion = 13.0;
 					};
 				};
 			};
@@ -377,6 +471,7 @@
 				72449BA4272E688400689527 /* TrainTest1 */,
 				72449BBA272E688400689527 /* TrainTest1Tests */,
 				72449BC4272E688400689527 /* TrainTest1UITests */,
+				727EA026272EE26200E603D6 /* ScareMePartyExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -407,6 +502,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		727EA025272EE26200E603D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				727EA03F272EE5BC00E603D6 /* BalooPaaji2-Bold.ttf in Resources */,
+				727EA032272EE26300E603D6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -414,6 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				727EA035272EE26300E603D6 /* ScareMeParty.intentdefinition in Sources */,
 				727EA002272E7F2600E603D6 /* StartViewController.swift in Sources */,
 				727EA01B272E9A2600E603D6 /* MainViewController.swift in Sources */,
 				727EA00F272E831100E603D6 /* SignUpViewController.swift in Sources */,
@@ -447,6 +552,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		727EA023272EE26200E603D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				727EA034272EE26300E603D6 /* ScareMeParty.intentdefinition in Sources */,
+				727EA02F272EE26200E603D6 /* ScareMeParty.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -459,6 +573,11 @@
 			isa = PBXTargetDependency;
 			target = 72449BA4272E688400689527 /* TrainTest1 */;
 			targetProxy = 72449BC6272E688400689527 /* PBXContainerItemProxy */;
+		};
+		727EA037272EE26300E603D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 727EA026272EE26200E603D6 /* ScareMePartyExtension */;
+			targetProxy = 727EA036272EE26300E603D6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -601,6 +720,7 @@
 		72449BD0272E688400689527 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TrainTest1/TrainTest1.entitlements;
@@ -634,6 +754,7 @@
 		72449BD1272E688400689527 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TrainTest1/TrainTest1.entitlements;
@@ -760,6 +881,64 @@
 			};
 			name = Release;
 		};
+		727EA03A272EE26300E603D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ScareMePartyExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T5T228SHK5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScareMeParty/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScareMeParty;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tsustudy.TrainTest1.ScareMeParty;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		727EA03B272EE26300E603D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ScareMePartyExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T5T228SHK5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScareMeParty/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScareMeParty;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tsustudy.TrainTest1.ScareMeParty;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -795,6 +974,15 @@
 			buildConfigurations = (
 				72449BD6272E688400689527 /* Debug */,
 				72449BD7272E688400689527 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		727EA039272EE26300E603D6 /* Build configuration list for PBXNativeTarget "ScareMePartyExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				727EA03A272EE26300E603D6 /* Debug */,
+				727EA03B272EE26300E603D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
