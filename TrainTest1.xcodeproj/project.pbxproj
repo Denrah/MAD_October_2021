@@ -42,6 +42,7 @@
 		727EA035272EE26300E603D6 /* ScareMeParty.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 727EA030272EE26200E603D6 /* ScareMeParty.intentdefinition */; };
 		727EA038272EE26300E603D6 /* ScareMePartyExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 727EA027272EE26200E603D6 /* ScareMePartyExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		727EA03F272EE5BC00E603D6 /* BalooPaaji2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 727EA03E272EE5BC00E603D6 /* BalooPaaji2-Bold.ttf */; };
+		727EA041272EE98900E603D6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EA040272EE98900E603D6 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		727EA033272EE26300E603D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		727EA03D272EE26A00E603D6 /* ScareMePartyExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScareMePartyExtension.entitlements; sourceTree = "<group>"; };
 		727EA03E272EE5BC00E603D6 /* BalooPaaji2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooPaaji2-Bold.ttf"; sourceTree = "<group>"; };
+		727EA040272EE98900E603D6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				727EA020272ECD1800E603D6 /* ChatsViewController.swift */,
+				727EA040272EE98900E603D6 /* ChatViewController.swift */,
 			);
 			path = Chats;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				727EA018272E8C6F00E603D6 /* AboutMeViewController.swift in Sources */,
 				72449BA9272E688400689527 /* AppDelegate.swift in Sources */,
 				72449BAB272E688400689527 /* SceneDelegate.swift in Sources */,
+				727EA041272EE98900E603D6 /* ChatViewController.swift in Sources */,
 				727EA005272E7F4900E603D6 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

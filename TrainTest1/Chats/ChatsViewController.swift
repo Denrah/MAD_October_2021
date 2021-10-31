@@ -71,17 +71,7 @@ class ChatsViewController: BaseViewController {
     }
     
     
-    let tabbar = TabbarView()
-    view.addSubview(tabbar)
-    tabbar.select(item: .chat)
-    tabbar.snp.makeConstraints { make in
-      make.height.equalTo(71)
-      make.leading.trailing.bottom.equalToSuperview()
-    }
-    
-    tabbar.onTap = { item in
-      self.showTab(item: item)
-    }
+
     
     view.addSubview(tableView)
     tableView.backgroundColor = .clear
@@ -99,6 +89,18 @@ class ChatsViewController: BaseViewController {
     
     tableView.delegate = self
     tableView.dataSource = self
+    
+    let tabbar = TabbarView()
+    view.addSubview(tabbar)
+    tabbar.select(item: .chat)
+    tabbar.snp.makeConstraints { make in
+      make.height.equalTo(71)
+      make.leading.trailing.bottom.equalToSuperview()
+    }
+    
+    tabbar.onTap = { item in
+      self.showTab(item: item)
+    }
     
     // Do any additional setup after loading the view.
   }
@@ -127,6 +129,11 @@ extension ChatsViewController: UITableViewDataSource, UITableViewDelegate {
     let cell = tableView.dequeueReusableCell(withIdentifier: "ChatCell", for: indexPath)
     (cell as? ChatCell)?.configure(chat: chats[indexPath.row])
     return cell
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let chatInfo = chats[indexPath.row]
+    navigationController?.pushViewController(ChatViewController(chatInfo: chatInfo), animated: true)
   }
 }
 
