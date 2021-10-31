@@ -71,6 +71,11 @@ class AboutMeViewController: BaseViewController {
   let nameTF = TextField()
   let aboutTF = UITextView()
   
+  let dateTextField = UITextField()
+  let datePicker = UIDatePicker()
+  
+  let selectDateBtn = UIButton()
+  
   let avatarButton = AvatarButton()
 
     override func viewDidLoad() {
@@ -119,7 +124,61 @@ class AboutMeViewController: BaseViewController {
         make.leading.trailing.equalToSuperview().inset(16)
         make.height.equalTo(128)
       }
+      
+      let partyDateLbl = UILabel()
+      partyDateLbl.textColor = .white
+      partyDateLbl.text = "Party Topics"
+      partyDateLbl.font = .bpalB?.withSize(24)
+      view.addSubview(partyDateLbl)
+      partyDateLbl.snp.makeConstraints { make in
+        make.top.equalTo(aboutTF.snp.bottom).offset(24)
+        make.centerX.equalToSuperview()
+      }
+      
+     
+      view.addSubview(selectDateBtn)
+      selectDateBtn.setTitleColor(.orange2, for: .normal)
+      selectDateBtn.titleLabel?.font = .bpalB?.withSize(24)
+      selectDateBtn.setTitle("Select Date and Time", for: .normal)
+      selectDateBtn.snp.makeConstraints { make in
+        make.top.equalTo(partyDateLbl.snp.bottom).offset(8)
+        make.height.equalTo(42)
+        make.leading.equalToSuperview().inset(16)
+      }
+      selectDateBtn.addTarget(self, action: #selector(selectDate), for: .touchUpInside)
 
+      
+      view.addSubview(dateTextField)
+      dateTextField.alpha = 0
+      dateTextField.inputView = datePicker
+      
+      datePicker.preferredDatePickerStyle = .wheels
+      datePicker.backgroundColor = .orange2
+      dateTextField.inputView?.backgroundColor = .orange2
+      datePicker.datePickerMode = .dateAndTime
+      
+      let doneButton = UIButton()
+      doneButton.setTitle("Done", for: .normal)
+      doneButton.titleLabel?.font = .bpalB?.withSize(16)
+      doneButton.setTitleColor(.orange2, for: .normal)
+      doneButton.addTarget(self, action: #selector(done), for: .touchUpInside)
+      
+      let accView = UIView()
+      accView.backgroundColor = .dark2
+      accView.snp.makeConstraints { make in
+        make.height.equalTo(40)
+        make.width.equalTo(UIScreen.main.bounds.width)
+      }
+      
+      accView.addSubview(doneButton)
+      doneButton.snp.makeConstraints { make in
+        make.centerY.equalToSuperview()
+        make.trailing.equalToSuperview().inset(16)
+      }
+      
+      datePicker.addTarget(self, action: #selector(dateDidChange), for: .valueChanged)
+      
+      dateTextField.inputAccessoryView = doneButton
       
       let saveBTN = CommonButton()
       view.addSubview(saveBTN)
@@ -132,6 +191,24 @@ class AboutMeViewController: BaseViewController {
       avatarButton.addTarget(self, action: #selector(pickImage), for: .touchUpInside)
         // Do any additional setup after loading the view.
     }
+  
+  @objc func done() {
+    view.endEditing(true)
+  }
+  
+  @objc func selectDate() {
+    dateTextField.becomeFirstResponder()
+  }
+  
+  @objc func dateDidChange() {
+    let date = datePicker.date
+    let formatter = DateFormatter()
+    formatter.dateFormat = "dd MMMM yyyy - HH:mm"
+    let dateStr = formatter.string(from: date)
+    selectDateBtn.setTitle(dateStr, for: .normal)
+    
+    UserDefaults(suiteName: "group.scareme")?.setValue(dateStr, forKey: "partyDate")
+  }
   
   @objc func save() {
     let name = nameTF.text

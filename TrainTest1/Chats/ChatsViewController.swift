@@ -215,6 +215,8 @@ class ChatCell: UITableViewCell {
       make.trailing.bottom.equalToSuperview()
       make.height.equalTo(1)
     }
+    
+    selectionStyle = .none
   }
   
   func configure(chat: ChatInfo) {
@@ -231,6 +233,8 @@ class ChatCell: UITableViewCell {
 class LastCellView: UIView {
   init(profile: Profile) {
     super.init(frame: .zero)
+    
+
     
     let imageView = UIImageView()
     imageView.kf.setImage(with: URL(string: profile.avatar ?? ""))
