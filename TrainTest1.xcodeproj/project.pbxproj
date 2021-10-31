@@ -16,6 +16,22 @@
 		72449BC0272E688400689527 /* TrainTest1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72449BBF272E688400689527 /* TrainTest1Tests.swift */; };
 		72449BCA272E688400689527 /* TrainTest1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72449BC9272E688400689527 /* TrainTest1UITests.swift */; };
 		72449BCC272E688400689527 /* TrainTest1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72449BCB272E688400689527 /* TrainTest1UITestsLaunchTests.swift */; };
+		727E9FA8272E6A4A00E603D6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 727E9FA7272E6A4A00E603D6 /* Kingfisher */; };
+		727E9FAB272E6A9300E603D6 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 727E9FAA272E6A9300E603D6 /* PromiseKit */; };
+		727E9FAE272E6A9F00E603D6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 727E9FAD272E6A9F00E603D6 /* Alamofire */; };
+		727E9FB1272E6AAE00E603D6 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 727E9FB0272E6AAE00E603D6 /* SnapKit */; };
+		727E9FB4272E6AC100E603D6 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 727E9FB3272E6AC100E603D6 /* Charts */; };
+		727E9FB7272E6ADC00E603D6 /* TPKeyboardAvoiding in Frameworks */ = {isa = PBXBuildFile; productRef = 727E9FB6272E6ADC00E603D6 /* TPKeyboardAvoiding */; };
+		727E9FBA272E6B0600E603D6 /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 727E9FB9272E6B0600E603D6 /* MBProgressHUD */; };
+		727E9FFF272E7DE100E603D6 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E9FFE272E7DE100E603D6 /* Common.swift */; };
+		727EA002272E7F2600E603D6 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EA001272E7F2600E603D6 /* StartViewController.swift */; };
+		727EA005272E7F4900E603D6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EA004272E7F4900E603D6 /* BaseViewController.swift */; };
+		727EA00C272E828D00E603D6 /* BalooPaaji2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 727EA00B272E828D00E603D6 /* BalooPaaji2-Bold.ttf */; };
+		727EA00F272E831100E603D6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EA00E272E831100E603D6 /* SignUpViewController.swift */; };
+		727EA012272E86B800E603D6 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EA011272E86B800E603D6 /* Network.swift */; };
+		727EA015272E8BBB00E603D6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EA014272E8BBB00E603D6 /* SignInViewController.swift */; };
+		727EA018272E8C6F00E603D6 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EA017272E8C6F00E603D6 /* AboutMeViewController.swift */; };
+		727EA01B272E9A2600E603D6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EA01A272E9A2600E603D6 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +65,15 @@
 		72449BC5272E688400689527 /* TrainTest1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainTest1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72449BC9272E688400689527 /* TrainTest1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainTest1UITests.swift; sourceTree = "<group>"; };
 		72449BCB272E688400689527 /* TrainTest1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainTest1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		727E9FFE272E7DE100E603D6 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		727EA001272E7F2600E603D6 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		727EA004272E7F4900E603D6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		727EA00B272E828D00E603D6 /* BalooPaaji2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooPaaji2-Bold.ttf"; sourceTree = "<group>"; };
+		727EA00E272E831100E603D6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		727EA011272E86B800E603D6 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		727EA014272E8BBB00E603D6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		727EA017272E8C6F00E603D6 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		727EA01A272E9A2600E603D6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +81,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				727E9FB4272E6AC100E603D6 /* Charts in Frameworks */,
+				727E9FAE272E6A9F00E603D6 /* Alamofire in Frameworks */,
+				727E9FB7272E6ADC00E603D6 /* TPKeyboardAvoiding in Frameworks */,
+				727E9FBA272E6B0600E603D6 /* MBProgressHUD in Frameworks */,
+				727E9FB1272E6AAE00E603D6 /* SnapKit in Frameworks */,
+				727E9FA8272E6A4A00E603D6 /* Kingfisher in Frameworks */,
+				727E9FAB272E6A9300E603D6 /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,12 +131,15 @@
 		72449BA7272E688400689527 /* TrainTest1 */ = {
 			isa = PBXGroup;
 			children = (
-				72449BA8272E688400689527 /* AppDelegate.swift */,
-				72449BAA272E688400689527 /* SceneDelegate.swift */,
-				72449BAC272E688400689527 /* ViewController.swift */,
-				72449BAE272E688400689527 /* Main.storyboard */,
-				72449BB1272E688400689527 /* Assets.xcassets */,
-				72449BB3272E688400689527 /* LaunchScreen.storyboard */,
+				727EA019272E9A1C00E603D6 /* MainScreen */,
+				727EA016272E8C6000E603D6 /* AboutMe */,
+				727EA013272E8BA900E603D6 /* SignIn */,
+				727EA010272E86A700E603D6 /* Services */,
+				727EA00D272E830700E603D6 /* SignUp */,
+				727EA006272E80AD00E603D6 /* Fonts */,
+				727EA003272E7F2D00E603D6 /* App */,
+				727EA000272E7F1900E603D6 /* StartScreen */,
+				727E9FFD272E7DD200E603D6 /* Common */,
 				72449BB6272E688400689527 /* Info.plist */,
 			);
 			path = TrainTest1;
@@ -127,6 +162,84 @@
 			path = TrainTest1UITests;
 			sourceTree = "<group>";
 		};
+		727E9FFD272E7DD200E603D6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				727E9FFE272E7DE100E603D6 /* Common.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		727EA000272E7F1900E603D6 /* StartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				727EA001272E7F2600E603D6 /* StartViewController.swift */,
+			);
+			path = StartScreen;
+			sourceTree = "<group>";
+		};
+		727EA003272E7F2D00E603D6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				72449BA8272E688400689527 /* AppDelegate.swift */,
+				72449BAA272E688400689527 /* SceneDelegate.swift */,
+				72449BAC272E688400689527 /* ViewController.swift */,
+				72449BAE272E688400689527 /* Main.storyboard */,
+				72449BB1272E688400689527 /* Assets.xcassets */,
+				72449BB3272E688400689527 /* LaunchScreen.storyboard */,
+				727EA004272E7F4900E603D6 /* BaseViewController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		727EA006272E80AD00E603D6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				727EA00B272E828D00E603D6 /* BalooPaaji2-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		727EA00D272E830700E603D6 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				727EA00E272E831100E603D6 /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		727EA010272E86A700E603D6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				727EA011272E86B800E603D6 /* Network.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		727EA013272E8BA900E603D6 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				727EA014272E8BBB00E603D6 /* SignInViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		727EA016272E8C6000E603D6 /* AboutMe */ = {
+			isa = PBXGroup;
+			children = (
+				727EA017272E8C6F00E603D6 /* AboutMeViewController.swift */,
+			);
+			path = AboutMe;
+			sourceTree = "<group>";
+		};
+		727EA019272E9A1C00E603D6 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				727EA01A272E9A2600E603D6 /* MainViewController.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +256,15 @@
 			dependencies = (
 			);
 			name = TrainTest1;
+			packageProductDependencies = (
+				727E9FA7272E6A4A00E603D6 /* Kingfisher */,
+				727E9FAA272E6A9300E603D6 /* PromiseKit */,
+				727E9FAD272E6A9F00E603D6 /* Alamofire */,
+				727E9FB0272E6AAE00E603D6 /* SnapKit */,
+				727E9FB3272E6AC100E603D6 /* Charts */,
+				727E9FB6272E6ADC00E603D6 /* TPKeyboardAvoiding */,
+				727E9FB9272E6B0600E603D6 /* MBProgressHUD */,
+			);
 			productName = TrainTest1;
 			productReference = 72449BA5272E688400689527 /* TrainTest1.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +337,15 @@
 				Base,
 			);
 			mainGroup = 72449B9C272E688400689527;
+			packageReferences = (
+				727E9FA6272E6A4A00E603D6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				727E9FA9272E6A9300E603D6 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				727E9FAC272E6A9F00E603D6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				727E9FAF272E6AAE00E603D6 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				727E9FB2272E6AC100E603D6 /* XCRemoteSwiftPackageReference "Charts" */,
+				727E9FB5272E6ADC00E603D6 /* XCRemoteSwiftPackageReference "TPKeyboardAvoiding" */,
+				727E9FB8272E6B0600E603D6 /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
+			);
 			productRefGroup = 72449BA6272E688400689527 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +364,7 @@
 			files = (
 				72449BB5272E688400689527 /* LaunchScreen.storyboard in Resources */,
 				72449BB2272E688400689527 /* Assets.xcassets in Resources */,
+				727EA00C272E828D00E603D6 /* BalooPaaji2-Bold.ttf in Resources */,
 				72449BB0272E688400689527 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +390,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				727EA002272E7F2600E603D6 /* StartViewController.swift in Sources */,
+				727EA01B272E9A2600E603D6 /* MainViewController.swift in Sources */,
+				727EA00F272E831100E603D6 /* SignUpViewController.swift in Sources */,
+				727EA012272E86B800E603D6 /* Network.swift in Sources */,
+				727E9FFF272E7DE100E603D6 /* Common.swift in Sources */,
 				72449BAD272E688400689527 /* ViewController.swift in Sources */,
+				727EA015272E8BBB00E603D6 /* SignInViewController.swift in Sources */,
+				727EA018272E8C6F00E603D6 /* AboutMeViewController.swift in Sources */,
 				72449BA9272E688400689527 /* AppDelegate.swift in Sources */,
 				72449BAB272E688400689527 /* SceneDelegate.swift in Sources */,
+				727EA005272E7F4900E603D6 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -422,7 +562,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -624,6 +764,103 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		727E9FA6272E6A4A00E603D6 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		727E9FA9272E6A9300E603D6 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit";
+			requirement = {
+				branch = v6;
+				kind = branch;
+			};
+		};
+		727E9FAC272E6A9F00E603D6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		727E9FAF272E6AAE00E603D6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		727E9FB2272E6AC100E603D6 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		727E9FB5272E6ADC00E603D6 /* XCRemoteSwiftPackageReference "TPKeyboardAvoiding" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/michaeltyson/TPKeyboardAvoiding";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		727E9FB8272E6B0600E603D6 /* XCRemoteSwiftPackageReference "MBProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jdg/MBProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		727E9FA7272E6A4A00E603D6 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 727E9FA6272E6A4A00E603D6 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		727E9FAA272E6A9300E603D6 /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 727E9FA9272E6A9300E603D6 /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+		727E9FAD272E6A9F00E603D6 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 727E9FAC272E6A9F00E603D6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		727E9FB0272E6AAE00E603D6 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 727E9FAF272E6AAE00E603D6 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		727E9FB3272E6AC100E603D6 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 727E9FB2272E6AC100E603D6 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+		727E9FB6272E6ADC00E603D6 /* TPKeyboardAvoiding */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 727E9FB5272E6ADC00E603D6 /* XCRemoteSwiftPackageReference "TPKeyboardAvoiding" */;
+			productName = TPKeyboardAvoiding;
+		};
+		727E9FB9272E6B0600E603D6 /* MBProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 727E9FB8272E6B0600E603D6 /* XCRemoteSwiftPackageReference "MBProgressHUD" */;
+			productName = MBProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 72449B9D272E688400689527 /* Project object */;
 }
