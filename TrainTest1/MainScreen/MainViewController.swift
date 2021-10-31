@@ -10,7 +10,15 @@ import Alamofire
 import Kingfisher
 
 class UserCardView: UIView {
+  let profile: Profile
+  
+  var onLike: (() -> Void)?
+  var onDislike: (() -> Void)?
+  var onTap: ((Profile) -> Void)?
+  
   init(profile: Profile) {
+    self.profile = profile
+    
     super.init(frame: .zero)
     
     layer.cornerRadius = 13
@@ -55,10 +63,15 @@ class UserCardView: UIView {
     }
     
     addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(didPan(gesure:))))
+    addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hanleTap)))
   }
   
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+  
+  @objc func hanleTap() {
+    onTap?(profile)
   }
   
   @objc func didPan(gesure: UIPanGestureRecognizer) {
@@ -74,16 +87,18 @@ class UserCardView: UIView {
       let delta = translation.x / UIScreen.main.bounds.width
       
       if translation.x > UIScreen.main.bounds.width / 3 {
+        onLike?()
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
-          self.transform = CGAffineTransform(translationX: UIScreen.main.bounds.width, y: 0).concatenating(CGAffineTransform(rotationAngle: (CGFloat.pi / 8) * delta))
+          self.transform = CGAffineTransform(translationX: UIScreen.main.bounds.width * 2, y: 0).concatenating(CGAffineTransform(rotationAngle: (CGFloat.pi / 8) * delta))
         }) { _ in
-          self.removeFromSuperview()
+         
         }
       } else if translation.x < -UIScreen.main.bounds.width / 3 {
+        onDislike?()
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
-          self.transform = CGAffineTransform(translationX: -UIScreen.main.bounds.width, y: 0).concatenating(CGAffineTransform(rotationAngle: (CGFloat.pi / 8) * delta))
+          self.transform = CGAffineTransform(translationX: -UIScreen.main.bounds.width * 2, y: 0).concatenating(CGAffineTransform(rotationAngle: (CGFloat.pi / 8) * delta))
         }) { _ in
-          self.removeFromSuperview()
+         
         }
       } else {
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
@@ -207,10 +222,15 @@ class MainViewController: BaseViewController {
   
   let cardContainerView = UIView()
   
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    navigationController?.setNavigationBarHidden(true, animated: true)
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    navigationController?.setNavigationBarHidden(true, animated: false)
+   
     
     let bgView = UIView()
     bgView.backgroundColor = .dark3
@@ -296,8 +316,11 @@ class MainViewController: BaseViewController {
     }
     
     tabbar.onTap = { item in
-     
+      self.showTab(item: item)
     }
+    
+    likeBtn.addTarget(self, action: #selector(likeUser), for: .touchUpInside)
+    dislikeBtn.addTarget(self, action: #selector(dislikeUser), for: .touchUpInside)
     
     getFeed()
     // Do any additional setup after loading the view.
@@ -318,10 +341,65 @@ class MainViewController: BaseViewController {
     cardContainerView.subviews.forEach { $0.removeFromSuperview() }
     profiles.reversed().forEach { profile in
       let card = UserCardView(profile: profile)
+      card.onLike = { [weak self] in
+        self?.likeUser()
+      }
+      card.onDislike = { [weak self] in
+        self?.dislikeUser()
+      }
+      card.onTap = { [weak self] profile in
+        let vc = ProfileViewController(profile: profile)
+        vc.onLikeUser = { [weak self] in
+          self?.cardContainerView.subviews.last?.removeFromSuperview()
+        }
+        self?.navigationController?.pushViewController(vc, animated: true)
+      }
       cardContainerView.addSubview(card)
       card.snp.makeConstraints { make in
         make.edges.equalToSuperview()
       }
+    }
+  }
+  
+  @objc func likeUser() {
+    
+    guard let profile = (cardContainerView.subviews.last as? UserCardView)?.profile else { return }
+    
+    print("Like \(profile.name ?? "")")
+    
+    showProgress()
+    network.request(type: Empty.self, url: "/v1/user/\(profile.userId ?? "")/like", method: .post, params: [:], encoding: URLEncoding.default).ensure {
+      self.hideProgress()
+    }.done { _ in
+      self.saveProfile(profile)
+      UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut) {
+        self.cardContainerView.subviews.last?.alpha = 0
+      } completion: { _ in
+        self.cardContainerView.subviews.last?.removeFromSuperview()
+      }
+
+    }.catch { error in
+      self.showAlert(text: error.localizedDescription)
+    }
+  }
+  
+  @objc func dislikeUser() {
+    guard let profile = (cardContainerView.subviews.last as? UserCardView)?.profile else { return }
+    
+    print("Dislike \(profile.name ?? "")")
+    
+    showProgress()
+    network.request(type: Empty.self, url: "/v1/user/\(profile.userId ?? "")/like", method: .post, params: [:], encoding: URLEncoding.default).ensure {
+      self.hideProgress()
+    }.done { _ in
+      UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut) {
+        self.cardContainerView.subviews.last?.alpha = 0
+      } completion: { _ in
+        self.cardContainerView.subviews.last?.removeFromSuperview()
+      }
+
+    }.catch { error in
+      self.showAlert(text: error.localizedDescription)
     }
   }
   
@@ -335,5 +413,10 @@ class MainViewController: BaseViewController {
    // Pass the selected object to the new view controller.
    }
    */
+  
+}
+
+
+struct Empty: Codable {
   
 }

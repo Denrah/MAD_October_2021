@@ -49,5 +49,36 @@ class BaseViewController: UIViewController {
   func hideProgress() {
     MBProgressHUD.hide(for: navigationController?.view ?? view, animated: true)
   }
+  
+  
+  func saveProfile(_ profile: Profile) {
+    let data = UserDefaults.standard.data(forKey: "profiles") ?? Data()
+    var profiles = (try? JSONDecoder().decode([Profile].self, from: data)) ?? []
+    
+    profiles.append(profile)
+    if let newData = try? JSONEncoder().encode(profiles) {
+      UserDefaults.standard.set(newData, forKey: "profiles")
+    }
+  }
 
+  func getProfiles() -> [Profile] {
+    guard let data = UserDefaults.standard.data(forKey: "profiles"),
+          let profiles = try? JSONDecoder().decode([Profile].self, from: data) else {
+      return []
+    }
+    
+    return profiles
+  }
+  
+  func showTab(item: TabItem) {
+    switch item {
+    case .feed:
+      navigationController?.setViewControllers([MainViewController()], animated: false)
+    case .chat:
+      navigationController?.setViewControllers([ChatsViewController()], animated: false)
+    case .profile:
+      return
+    }
+  }
+  
 }

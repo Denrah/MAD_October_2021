@@ -32,6 +32,8 @@
 		727EA015272E8BBB00E603D6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EA014272E8BBB00E603D6 /* SignInViewController.swift */; };
 		727EA018272E8C6F00E603D6 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EA017272E8C6F00E603D6 /* AboutMeViewController.swift */; };
 		727EA01B272E9A2600E603D6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EA01A272E9A2600E603D6 /* MainViewController.swift */; };
+		727EA01E272EC5F300E603D6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EA01D272EC5F300E603D6 /* ProfileViewController.swift */; };
+		727EA021272ECD1800E603D6 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EA020272ECD1800E603D6 /* ChatsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		727EA014272E8BBB00E603D6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		727EA017272E8C6F00E603D6 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		727EA01A272E9A2600E603D6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		727EA01D272EC5F300E603D6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		727EA020272ECD1800E603D6 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,8 @@
 		72449BA7272E688400689527 /* TrainTest1 */ = {
 			isa = PBXGroup;
 			children = (
+				727EA01F272ECD0A00E603D6 /* Chats */,
+				727EA01C272EC5E300E603D6 /* Profile */,
 				727EA019272E9A1C00E603D6 /* MainScreen */,
 				727EA016272E8C6000E603D6 /* AboutMe */,
 				727EA013272E8BA900E603D6 /* SignIn */,
@@ -238,6 +244,22 @@
 				727EA01A272E9A2600E603D6 /* MainViewController.swift */,
 			);
 			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		727EA01C272EC5E300E603D6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				727EA01D272EC5F300E603D6 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		727EA01F272ECD0A00E603D6 /* Chats */ = {
+			isa = PBXGroup;
+			children = (
+				727EA020272ECD1800E603D6 /* ChatsViewController.swift */,
+			);
+			path = Chats;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,8 +416,10 @@
 				727EA01B272E9A2600E603D6 /* MainViewController.swift in Sources */,
 				727EA00F272E831100E603D6 /* SignUpViewController.swift in Sources */,
 				727EA012272E86B800E603D6 /* Network.swift in Sources */,
+				727EA021272ECD1800E603D6 /* ChatsViewController.swift in Sources */,
 				727E9FFF272E7DE100E603D6 /* Common.swift in Sources */,
 				72449BAD272E688400689527 /* ViewController.swift in Sources */,
+				727EA01E272EC5F300E603D6 /* ProfileViewController.swift in Sources */,
 				727EA015272E8BBB00E603D6 /* SignInViewController.swift in Sources */,
 				727EA018272E8C6F00E603D6 /* AboutMeViewController.swift in Sources */,
 				72449BA9272E688400689527 /* AppDelegate.swift in Sources */,

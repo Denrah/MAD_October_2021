@@ -16,6 +16,11 @@ class Network: RequestInterceptor {
   
   func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
     
+    guard request.retryCount < 2 else {
+      completion(.doNotRetry)
+      return
+    }
+    
     if request.response?.statusCode == 401 {
       refresh().done { reposnse in
         UserDefaults.standard.set(reposnse?.accessToken ?? "", forKey: "access")
@@ -28,13 +33,16 @@ class Network: RequestInterceptor {
     }
   }
   
-  func request<T: Codable>(type: T.Type, url: String, method: HTTPMethod, params: Parameters, encoding: ParameterEncoding) -> Promise<T?> {
+  func request<T: Codable>(type: T.Type, url: String, method: HTTPMethod, params: Parameters?, encoding: ParameterEncoding) -> Promise<T?> {
     
     var headers: HTTPHeaders = .init()
     
     if let token = UserDefaults.standard.string(forKey: "access") {
       headers.add(HTTPHeader(name: "Authorization", value: "Bearer \(token)"))
+      print(token)
     }
+    
+   
     
     print(baseURL + url)
     return Promise { seal in
