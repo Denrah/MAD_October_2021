@@ -73,14 +73,21 @@ class ChatViewController: BaseViewController {
   @objc func sendMessage() {
     guard let message = messageTextField.text, !message.isEmpty, let chatID = chatInfo.chat?.id else { return }
     showProgress()
-    network.request(type: Empty.self, url: "/v1/chat/\(chatID)/message", method: .post, params: [
-      "messageText": message
-    ], encoding: JSONEncoding.default).ensure {
+    
+    AF.upload(multipartFormData: { formData in
+      formData.append(message.data(using: .utf8) ?? Data(), withName: "messageText")
+    }, to: network.baseURL + "/v1/chat/\(chatID)/message", headers: [
+      "Authorization": "Bearer \(UserDefaults.standard.string(forKey: "access") ?? "")"
+    ], interceptor: network).responseData { response in
       self.hideProgress()
-    }.done { _ in
-      
-    }.catch { error in
-      self.showAlert(text: error.localizedDescription)
+      switch response.result {
+      case .success:
+        print("success")
+        self.messageTextField.text = ""
+      case .failure(let error):
+        print(error)
+        self.showAlert(text: error.localizedDescription)
+      }
     }
   }
   
