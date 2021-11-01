@@ -185,6 +185,9 @@ class AboutMeViewController: BaseViewController {
   
   let topicsView = TopicsView()
   
+  let dateDivider = UIView()
+  let aboutPlaceholderLabel = UILabel()
+  
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     navigationController?.setNavigationBarHidden(true, animated: false)
@@ -240,14 +243,23 @@ class AboutMeViewController: BaseViewController {
     aboutTF.font = .bpalB
     aboutTF.textColor = .white
     aboutTF.backgroundColor = .dark2
-    aboutTF.text = "About"
+    aboutTF.delegate = self
     aboutTF.layer.cornerRadius = 16
     aboutTF.isScrollEnabled = true
-    aboutTF.contentInset = UIEdgeInsets(top: 18, left: 24, bottom: 18, right: 24)
+    aboutTF.contentInset = UIEdgeInsets(top: 12, left: 24, bottom: 12, right: 24)
     aboutTF.snp.makeConstraints { make in
       make.top.equalTo(nameTF.snp.bottom).offset(8)
       make.leading.trailing.equalToSuperview().inset(16)
       make.height.equalTo(128)
+    }
+    
+    containerView.addSubview(aboutPlaceholderLabel)
+    aboutPlaceholderLabel.textColor = .white
+    aboutPlaceholderLabel.font = .bpalB
+    aboutPlaceholderLabel.text = "About"
+    aboutPlaceholderLabel.snp.makeConstraints { make in
+      make.leading.equalTo(aboutTF).inset(24)
+      make.top.equalTo(aboutTF).inset(18)
     }
     
     let topicsLabel = UILabel()
@@ -289,6 +301,13 @@ class AboutMeViewController: BaseViewController {
     }
     selectDateBtn.addTarget(self, action: #selector(selectDate), for: .touchUpInside)
     
+    view.addSubview(dateDivider)
+    dateDivider.backgroundColor = .orange2
+    dateDivider.snp.makeConstraints { make in
+      make.leading.trailing.equalTo(selectDateBtn)
+      make.top.equalTo(selectDateBtn.snp.bottom).offset(-12)
+      make.height.equalTo(1)
+    }
     
     containerView.addSubview(dateTextField)
     dateTextField.alpha = 0
@@ -299,28 +318,17 @@ class AboutMeViewController: BaseViewController {
     dateTextField.inputView?.backgroundColor = .orange2
     datePicker.datePickerMode = .dateAndTime
     
-    let doneButton = UIButton()
-    doneButton.setTitle("Done", for: .normal)
-    doneButton.titleLabel?.font = .bpalB?.withSize(16)
-    doneButton.setTitleColor(.orange2, for: .normal)
-    doneButton.addTarget(self, action: #selector(done), for: .touchUpInside)
-    
-    let accView = UIView()
-    accView.backgroundColor = .dark2
-    accView.snp.makeConstraints { make in
-      make.height.equalTo(40)
-      make.width.equalTo(UIScreen.main.bounds.width)
-    }
-    
-    accView.addSubview(doneButton)
-    doneButton.snp.makeConstraints { make in
-      make.centerY.equalToSuperview()
-      make.trailing.equalToSuperview().inset(16)
-    }
+    let bar = UIToolbar()
+    bar.backgroundColor = .dark2
+    bar.barTintColor = .dark2
+    let done = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(done))
+    done.tintColor = .orange2
+    bar.items = [UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil), done]
+    bar.sizeToFit()
     
     datePicker.addTarget(self, action: #selector(dateDidChange), for: .valueChanged)
     
-    dateTextField.inputAccessoryView = doneButton
+    dateTextField.inputAccessoryView = bar
     
     let saveBTN = CommonButton()
     containerView.addSubview(saveBTN)
@@ -370,10 +378,7 @@ class AboutMeViewController: BaseViewController {
   
   @objc func save() {
     let name = nameTF.text
-    var about = aboutTF.text
-    if about == "About" {
-      about = nil
-    }
+    let about = aboutTF.text
     
     guard name?.isEmpty == false else {
       showAlert(text: "Fill in name")
@@ -469,5 +474,11 @@ extension AboutMeViewController: UIImagePickerControllerDelegate & UINavigationC
       avatarButton.setImage(image, for: .normal)
       avatarButton.isImageSelected = true
     }
+  }
+}
+
+extension AboutMeViewController: UITextViewDelegate {
+  func textViewDidChange(_ textView: UITextView) {
+    aboutPlaceholderLabel.isHidden = !textView.text.isEmpty
   }
 }
