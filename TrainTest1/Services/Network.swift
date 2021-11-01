@@ -30,6 +30,8 @@ class Network: RequestInterceptor {
         self.onRefreshFailed?()
         completion(.doNotRetry)
       }
+    } else {
+      completion(.doNotRetry)
     }
   }
   

@@ -17,9 +17,6 @@ class ViewController: UIViewController {
     } else {
       navigationController?.setViewControllers([StartViewController()], animated: false)
     }
-      
-    
-    
     // Do any additional setup after loading the view.
   }
 
