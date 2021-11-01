@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     if UserDefaults.standard.string(forKey: "access") != nil {
-      navigationController?.setViewControllers([AboutMeViewController()], animated: false)
+      navigationController?.setViewControllers([MainViewController()], animated: false)
     } else {
       navigationController?.setViewControllers([StartViewController()], animated: false)
     }
