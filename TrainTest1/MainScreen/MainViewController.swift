@@ -52,10 +52,15 @@ class UserCardView: UIView {
       make.centerY.equalToSuperview()
     }
     
+    let data = UserDefaults.standard.data(forKey: "topics") ?? Data()
+    let topics = (try? JSONDecoder().decode([Topic].self, from: data)) ?? []
+    
+    let countTopics = topics.filter { topic in profile.topics.contains { $0.id == topic.id } }.count
+    
     let matchLabel = UILabel()
     matchLabel.textColor = .orange1
     matchLabel.font = .bpalB?.withSize(21)
-    matchLabel.text = "0 Matches"
+    matchLabel.text = "\(countTopics) Matches"
     bottomView.addSubview(matchLabel)
     matchLabel.snp.makeConstraints { make in
       make.trailing.equalToSuperview().inset(16)

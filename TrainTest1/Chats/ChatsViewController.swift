@@ -154,6 +154,17 @@ struct Message: Codable {
   let id: String?
   let text: String?
   let user: User?
+  let createdAt: String?
+  
+  var date: Date? {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'[zzz]"
+    if let createdAt = createdAt {
+      return formatter.date(from: createdAt)
+    } else {
+      return nil
+    }
+  }
 }
 
 struct ChatInfo: Codable {
