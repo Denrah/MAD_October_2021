@@ -244,7 +244,7 @@ class ChatViewController: BaseViewController {
     tableView.snp.makeConstraints { make in
       make.top.equalTo(stackView.snp.bottom).offset(16)
       make.leading.trailing.equalToSuperview()
-      make.bottom.equalTo(messageTextField.snp.top).inset(8)
+      make.bottom.equalTo(messageTextField.snp.top).offset(-8)
     }
     
     tableView.register(LeftMessageCell.self, forCellReuseIdentifier: "LeftMessageCell")
