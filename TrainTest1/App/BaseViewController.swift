@@ -75,7 +75,7 @@ class BaseViewController: UIViewController {
     case .feed:
       navigationController?.setViewControllers([MainViewController(viewModel: MainViewModel())], animated: false)
     case .chat:
-      navigationController?.setViewControllers([ChatsViewController()], animated: false)
+      navigationController?.setViewControllers([ChatsViewController(viewModel: ChatsViewModel())], animated: false)
     case .profile:
       return
     }

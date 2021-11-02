@@ -22,6 +22,12 @@
 		726DA83A2731082000D60F7E /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726DA8392731082000D60F7E /* Topic.swift */; };
 		726DA83C2731099D00D60F7E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726DA83B2731099D00D60F7E /* MainViewModel.swift */; };
 		726DA84027310EB500D60F7E /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726DA83F27310EB500D60F7E /* SignInViewModel.swift */; };
+		726DA8442731333E00D60F7E /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726DA8432731333E00D60F7E /* ChatCell.swift */; };
+		726DA8462731336100D60F7E /* ChatCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726DA8452731336100D60F7E /* ChatCellViewModel.swift */; };
+		726DA8482731342C00D60F7E /* ChatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726DA8472731342C00D60F7E /* ChatsViewModel.swift */; };
+		726DA84B2731344B00D60F7E /* ChatInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726DA84A2731344B00D60F7E /* ChatInfo.swift */; };
+		726DA84D27313B8700D60F7E /* LastCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726DA84C27313B8700D60F7E /* LastCellView.swift */; };
+		726DA84F27313BA300D60F7E /* LastCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726DA84E27313BA300D60F7E /* LastCellViewModel.swift */; };
 		727E9FA8272E6A4A00E603D6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 727E9FA7272E6A4A00E603D6 /* Kingfisher */; };
 		727E9FAB272E6A9300E603D6 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 727E9FAA272E6A9300E603D6 /* PromiseKit */; };
 		727E9FAE272E6A9F00E603D6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 727E9FAD272E6A9F00E603D6 /* Alamofire */; };
@@ -109,6 +115,12 @@
 		726DA8392731082000D60F7E /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		726DA83B2731099D00D60F7E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		726DA83F27310EB500D60F7E /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		726DA8432731333E00D60F7E /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		726DA8452731336100D60F7E /* ChatCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCellViewModel.swift; sourceTree = "<group>"; };
+		726DA8472731342C00D60F7E /* ChatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewModel.swift; sourceTree = "<group>"; };
+		726DA84A2731344B00D60F7E /* ChatInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInfo.swift; sourceTree = "<group>"; };
+		726DA84C27313B8700D60F7E /* LastCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastCellView.swift; sourceTree = "<group>"; };
+		726DA84E27313BA300D60F7E /* LastCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastCellViewModel.swift; sourceTree = "<group>"; };
 		727E9FFE272E7DE100E603D6 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		727EA001272E7F2600E603D6 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		727EA004272E7F4900E603D6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -278,6 +290,35 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
+		726DA8412731330B00D60F7E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				727EA020272ECD1800E603D6 /* ChatsViewController.swift */,
+				727EA040272EE98900E603D6 /* ChatViewController.swift */,
+				726DA8432731333E00D60F7E /* ChatCell.swift */,
+				726DA84C27313B8700D60F7E /* LastCellView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		726DA8422731331500D60F7E /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				726DA8452731336100D60F7E /* ChatCellViewModel.swift */,
+				726DA8472731342C00D60F7E /* ChatsViewModel.swift */,
+				726DA84E27313BA300D60F7E /* LastCellViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		726DA8492731343C00D60F7E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				726DA84A2731344B00D60F7E /* ChatInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		727E9FFD272E7DD200E603D6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,8 +411,9 @@
 		727EA01F272ECD0A00E603D6 /* Chats */ = {
 			isa = PBXGroup;
 			children = (
-				727EA020272ECD1800E603D6 /* ChatsViewController.swift */,
-				727EA040272EE98900E603D6 /* ChatViewController.swift */,
+				726DA8492731343C00D60F7E /* Model */,
+				726DA8422731331500D60F7E /* View Model */,
+				726DA8412731330B00D60F7E /* View */,
 			);
 			path = Chats;
 			sourceTree = "<group>";
@@ -585,16 +627,22 @@
 				726DA83A2731082000D60F7E /* Topic.swift in Sources */,
 				727EA01B272E9A2600E603D6 /* MainViewController.swift in Sources */,
 				726DA835273107EC00D60F7E /* UserCardViewModel.swift in Sources */,
+				726DA8482731342C00D60F7E /* ChatsViewModel.swift in Sources */,
 				727EA00F272E831100E603D6 /* SignUpViewController.swift in Sources */,
 				727EA012272E86B800E603D6 /* Network.swift in Sources */,
 				726DA84027310EB500D60F7E /* SignInViewModel.swift in Sources */,
+				726DA84F27313BA300D60F7E /* LastCellViewModel.swift in Sources */,
+				726DA8462731336100D60F7E /* ChatCellViewModel.swift in Sources */,
 				726DA8382731081000D60F7E /* Profile.swift in Sources */,
 				727EA021272ECD1800E603D6 /* ChatsViewController.swift in Sources */,
 				727E9FFF272E7DE100E603D6 /* Common.swift in Sources */,
 				72449BAD272E688400689527 /* ViewController.swift in Sources */,
+				726DA8442731333E00D60F7E /* ChatCell.swift in Sources */,
 				727EA01E272EC5F300E603D6 /* ProfileViewController.swift in Sources */,
 				727EA015272E8BBB00E603D6 /* SignInViewController.swift in Sources */,
+				726DA84B2731344B00D60F7E /* ChatInfo.swift in Sources */,
 				727EA018272E8C6F00E603D6 /* AboutMeViewController.swift in Sources */,
+				726DA84D27313B8700D60F7E /* LastCellView.swift in Sources */,
 				726DA83C2731099D00D60F7E /* MainViewModel.swift in Sources */,
 				72449BA9272E688400689527 /* AppDelegate.swift in Sources */,
 				72449BAB272E688400689527 /* SceneDelegate.swift in Sources */,
