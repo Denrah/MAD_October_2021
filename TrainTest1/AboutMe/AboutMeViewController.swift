@@ -11,19 +11,6 @@ import PromiseKit
 import TPKeyboardAvoiding
 import SnapKit
 
-struct Topic: Codable {
-  let id: String?
-  let title: String?
-}
-
-struct Profile: Codable {
-  let name: String?
-  let userId: String?
-  let aboutMyself: String?
-  let avatar: String?
-  let topics: [Topic]
-}
-
 class AvatarButton: UIButton {
   var isImageSelected: Bool = false {
     didSet {
@@ -400,7 +387,7 @@ class AboutMeViewController: BaseViewController {
     }.done { profile in
       let topicsData = try? JSONEncoder().encode(self.topicsView.topicButtons.filter(\.isChoosen).map(\.topic))
       UserDefaults.standard.set(topicsData, forKey: "topics")
-      self.navigationController?.setViewControllers([MainViewController()], animated: true)
+      self.navigationController?.setViewControllers([MainViewController(viewModel: MainViewModel())], animated: true)
     }.catch { error in
       self.showAlert(text: error.localizedDescription)
     }

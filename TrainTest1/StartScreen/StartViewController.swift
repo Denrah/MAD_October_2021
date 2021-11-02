@@ -104,7 +104,7 @@ class StartViewController: BaseViewController {
   }
   
   @objc func signIn() {
-    navigationController?.pushViewController(SignInViewController(), animated: true)
+    navigationController?.pushViewController(SignInViewController(viewModel: SignInViewModel()), animated: true)
   }
   
   var timer: Timer?

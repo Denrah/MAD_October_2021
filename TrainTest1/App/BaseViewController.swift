@@ -20,7 +20,7 @@ class BaseViewController: UIViewController {
       navigationController?.navigationBar.tintColor = .white
       
       network.onRefreshFailed = { [weak self] in
-        self?.navigationController?.setViewControllers([StartViewController(), SignInViewController()], animated: true)
+        self?.navigationController?.setViewControllers([StartViewController(), SignInViewController(viewModel: SignInViewModel())], animated: true)
       }
         // Do any additional setup after loading the view.
     }
@@ -73,7 +73,7 @@ class BaseViewController: UIViewController {
   func showTab(item: TabItem) {
     switch item {
     case .feed:
-      navigationController?.setViewControllers([MainViewController()], animated: false)
+      navigationController?.setViewControllers([MainViewController(viewModel: MainViewModel())], animated: false)
     case .chat:
       navigationController?.setViewControllers([ChatsViewController()], animated: false)
     case .profile:
